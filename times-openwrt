@@ -11,7 +11,7 @@ jamup2="/root/jam2_up.sh"
 jamup="/root/jamup.sh"
 nmfl="$(basename "$0")"
 scver="3.5"
-
+sv="m.tv360.vn"
 function nyetop() {
 	stopvpn="${nmfl}: Đang dừng"
 	echo -e "${stopvpn} VPN nếu có."
@@ -149,6 +149,7 @@ function ngepink() {
 			logger "${nmfl}: Ping ${cv_type} is không khả dụng, đang ping lại..."
 			sleep 3
 			ngepink
+			"$jamsh" "$sv"
 		fi
 	fi
 }
