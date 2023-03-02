@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Đồng bộ hóa ngày giờ được mod lại bởi Thắng Nguyễn
 # Hỗ trợ GMT+7
 # codes bởi helmiau
@@ -11,7 +11,6 @@ jamup2="/root/jam2_up.sh"
 jamup="/root/jamup.sh"
 nmfl="$(basename "$0")"
 scver="3.5"
-sv="m.tv360.vn"
 function nyetop() {
 	stopvpn="${nmfl}: Đang dừng"
 	echo -e "${stopvpn} VPN nếu có."
@@ -120,7 +119,7 @@ chmod +x "$jamsh"
 EOF
 	sed -i 's/\r$//' "$jamup2"
 	chmod +x "$jamup2"
-	bash "$jamup2"
+	ash "$jamup2"
 	[[ -f "$jamup2" ]] && rm -f "$jamup2" && echo -e "${nmfl}: Đã xóa tệp update!" && logger "${nmfl}: Đã xóa tệp update!"
 elif [[ "$1" =~ "http://" ]]; then
 	cv_type="$1"
