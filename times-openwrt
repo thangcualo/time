@@ -148,7 +148,6 @@ function ngepink() {
 			logger "${nmfl}: Ping ${cv_type} is không khả dụng, đang ping lại..."
 			sleep 3
 			ngepink
-			"$jamsh" "$sv"
 		fi
 	fi
 }
